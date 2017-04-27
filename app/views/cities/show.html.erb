@@ -1,4 +1,12 @@
-<h1>Welcome to <%= @city.name %></h1>
+
+<form class="add" action="/cities/<%= @city.id %>/posts/new">
+  <input type="submit" class="btn-primary" value="Add New Post">
+</form>
+
+<div class="banner">
+  <h1>Welcome to <%= @city.name %></h1>
+</div>
+
 
 <img src="<%= @city.photo_url %>" width="500px" alt="">
 <hr>
@@ -12,9 +20,4 @@
     <% end %>
 
 </ul>
-
-<hr>
-<form action="/cities/<%= @city.id %>/posts/new">
-  <input type="submit" class="btn-primary" value="Add New Post">
-</form>
 <br>
