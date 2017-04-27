@@ -1,1 +1,7 @@
-<h1>Its working</h1>
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+<small><b>Posted: <%= @post.created_at %></b></small>
+
+<form class="" action="/cities/<%= @post.city_id %>">
+  <input type="submit"name="" value="Go Back">
+</form>
