@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+     @confirm = "Are you sure you want to delete this review: #{@post.title} ?"
   end
 
   def edit
@@ -20,28 +21,40 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
     @city = City.find(params[:city_id])
+    @post = Post.new
+    render :new
+
   end
 
   def create
-    @post = Post.new(post_params)
+    @city = City.find(params[:city_id])
+
+    post = Post.create(post_params)
+    city = post.city
+    post.save
     if post.save
-      city = City.find(params[:city_id])
-      city.posts << @post
-      render json: @post, status: :created
+      redirect_to city_post_path(city, post)
     else
-      render json: @post, status: :uporocessable_entity
+      redirect_to city_path(city)
     end
+
   end
 
   def destroy
+    @city = City.find(params[:city_id])
 
+    @post = Post.find(params[:id])
+    @post.destroy
+    flash[:notice] = "'#{@post.title}' post was deleted"
+    redirect_to city_path(@city)
   end
 
   private
     def post_params
       params.require(:post).permit(:title, :content)
+      .merge(city_id: params[:city_id])
+
     end
 
 end
