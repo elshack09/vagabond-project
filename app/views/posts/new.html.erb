@@ -1,6 +1,15 @@
 <h1>Add New Post for <%= @city.name %> </h1>
 
-<%= form_for @post, url: "/cities/#{@city.id}/posts" do |f| %>
+<% if @post.errors.any? %>
+  <h3>Oops there were some errors. Please try again:</h3>
+  <ul>
+    <% @list.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @post, url: {action: 'create'} do |f| %>
   <%= f.label :title %> <br>
   <%= f.text_field :title %> <br>
 
