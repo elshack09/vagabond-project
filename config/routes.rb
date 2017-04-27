@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get '/' => 'cities#index'
   get '/cities/:id' => 'cities#show'
 
