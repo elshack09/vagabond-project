@@ -1,3 +1,12 @@
 <h1>Welcome to <%= @city.name %></h1>
 
 <img src="<%= @city.photo_url %>" width="500px" alt="">
+
+<ul>
+    <% @posts.each do |post| %>
+        <li>
+            <h2><%= post.title %> <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>">View More</a></h2>
+        </li>
+    <% end %>
+
+</ul>
