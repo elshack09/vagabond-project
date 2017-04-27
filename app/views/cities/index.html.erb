@@ -1,4 +1,14 @@
 <div class="homepage">
   <h1>Vagabond</h1>
   <p>Your Favorite Travel App</p>
+  <h3>
+  <ul>
+    <% @cities.each do |city| %>
+    <a href="/cities/<%= city.id %>">
+    <li> <%= city.name %></li>
+    </a>
+    <% end %>
+  </ul>
+  </h3>
+
 </div>
