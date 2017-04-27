@@ -24,8 +24,23 @@ nav {
   padding: 20px;
   background-color: #eee;
   text-align: center;
+  height: 100px;
+}
+
+nav .brand {
+  text-align: left;
+}
+
+.main-nav {
+  text-align: right;
 }
 
 li {
   list-style-type: none;
+}
+
+/*SHOW CITY PAGE*/
+
+.add {
+  text-align: right;
 }

@@ -9,7 +9,12 @@ Rails.application.routes.draw do
     get '/cities/:id' => 'cities#show'
 
     #posts
+    get '/cities/:city_id/posts' => 'posts#index'
     get '/cities/:city_id/posts/:id' => 'posts#show'
+    get '/cities/:city_id/posts/new' => 'posts#new'
+    post '/cities/:city_id/posts' => 'posts#create'
+    get '/cities/:city_id/posts' => 'posts#create'
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
