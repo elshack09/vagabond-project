@@ -3,23 +3,28 @@
   <input type="submit" class="btn-primary" value="Add New Post">
 </form>
 
-<div class="banner">
+<div class="banner" style="background-image: url(<%= @city.photo_url %>); background-position: center; background-size:cover;">
   <h1>Welcome to <%= @city.name %></h1>
 </div>
 
+<div class="row">
+  <div class="col col-md-6">
+    <img src="<%= @city.photo_url %>" width="500px" alt="">
 
-<img src="<%= @city.photo_url %>" width="500px" alt="">
+  </div>
+  <div class="col col-md-6">
+    <h2>Reviews:</h2>
+
+    <ul>
+        <% @posts.each do |post| %>
+            <li>
+                <h4> <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>"><%= post.title %></a></h4> <p><%= post.created_at %></p>
+
+
+            </li>
+        <% end %>
+
+    </ul>
+  </div>
+</div>
 <hr>
-<h2>Reviews:</h2>
-
-<ul>
-    <% @posts.each do |post| %>
-        <li>
-            <h4> <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>"><%= post.title %></a></h4> <p><%= post.created_at %></p>
-
-
-        </li>
-    <% end %>
-
-</ul>
-<br>
