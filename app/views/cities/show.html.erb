@@ -16,6 +16,11 @@
     <% @posts.each do |post| %>
         <li>
             <h4> <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>"><%= post.title %></a></h4> <p><%= post.created_at %></p>
+
+            <form action="" >
+              <input class="btn btn-danger" type="submit" name="" value="Delete">
+            </form>
+
         </li>
     <% end %>
 
