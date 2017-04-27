@@ -12,7 +12,11 @@ class PostsController < ApplicationController
   end
 
   def update
+       @post = Post.find(params[:id])
+       @city = City.find(params[:city_id])
+       @post.update(post_params)
 
+       redirect_to city_path(@city)
   end
 
   def new
