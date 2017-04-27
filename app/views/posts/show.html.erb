@@ -2,7 +2,7 @@
 <p><%= @post.content %></p>
 <small><b>Posted: <%= @post.created_at %></b></small> <br>
 
-<%= link_to 'Delete', {:action => 'destroy', :id => @post.id}, :confirm => 'Are you sure?', :class => "btn btn-danger", :method => :delete %>
+<%= link_to 'Delete', {:action => 'destroy', :id => @post.id}, :confirm => 'Are you sure?', :class => "btn btn-danger", :method => :delete, :data => {:confirm => @confirm} %>
 
 <hr>
 <form class="" action="/cities/<%= @post.city_id %>">
