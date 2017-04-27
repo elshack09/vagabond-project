@@ -18,11 +18,13 @@ class PostsController < ApplicationController
   def create
     @city = City.find(params[:city_id])
 
-    @post = Post.create(post_params)
-    if @post.save
-      redirect_to city_post_path(@city, @post.id)
+    post = Post.create(post_params)
+    city = post.city
+    post.save
+    if post.save
+      redirect_to city_post_path(city, post)
     else
-      redirect_to city_path(@city)
+      redirect_to city_path(city)
     end
 
   end
@@ -39,6 +41,7 @@ class PostsController < ApplicationController
   private
     def post_params
       params.require(:post).permit(:title, :content)
+      .merge(city_id: params[:city_id])
 
     end
 
