@@ -1,13 +1,11 @@
 <h1>edit post <%= @post.title %></h1>
 
-<% form_for(:post, @post, :url => {:action => 'update', :id => @post.id}) do |f| %>
-  <p>
-    Title: <%= f.text_field 'title' %>
-  </p>
-  <p>
-    Content: <%= f.text_field 'content' %>
-  </p>
-  <p>
-    <%= f.submit "Save" %>
-  </p>
+<%= form_for edit_city_post_path do %>
+  <label>Post title:</label><br>
+  <%= text_field_tag :title, @post.title %><br>
+
+  <label>Post Description</label><br>
+  <%= text_area_tag :content, @post.content %><br>
+
+  <%= submit_tag "Submit Post" %>
 <% end %>

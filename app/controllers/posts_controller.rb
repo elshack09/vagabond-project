@@ -11,6 +11,10 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
   end
 
+  def update
+
+  end
+
   def new
     @post = Post.new
     @city = City.find(params[:city_id])
