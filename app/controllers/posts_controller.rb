@@ -8,6 +8,18 @@ class PostsController < ApplicationController
      @confirm = "Are you sure you want to delete this review: #{@post.title} ?"
   end
 
+  def edit
+      @post = Post.find(params[:id])
+  end
+
+  def update
+       @post = Post.find(params[:id])
+       @city = City.find(params[:city_id])
+       @post.update(post_params)
+
+       redirect_to city_path(@city)
+  end
+
   def new
     @city = City.find(params[:city_id])
     @post = Post.new
