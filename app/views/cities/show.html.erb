@@ -1,8 +1,4 @@
 
-<form class="add" action="/cities/<%= @city.id %>/posts/new">
-  <input type="submit" class="btn-primary" value="Add New Post">
-</form>
-
 <div class="banner" style="background-image: url(<%= @city.photo_url %>); background-position: center; background-size:cover;">
   <h1>Welcome to <%= @city.name %></h1>
 </div>
@@ -25,6 +21,10 @@
         <% end %>
 
     </ul>
+    <br>
+    <form class="add" action="/cities/<%= @city.id %>/posts/new">
+      <input type="submit" class="btn-primary" value="Add New Post">
+    </form>
   </div>
 </div>
 <hr>

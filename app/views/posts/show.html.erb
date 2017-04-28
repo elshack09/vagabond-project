@@ -1,13 +1,13 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.content %></p>
 <small><b>Posted: <%= @post.created_at %></b></small> <br>
+<br>
 
-<%= link_to 'Delete', {:action => 'destroy', :id => @post.id}, :confirm => 'Are you sure?', :class => "btn btn-danger", :method => :delete, :data => {:confirm => @confirm} %>
+<%= link_to 'Edit', :action => 'edit', :id => @post.id %> <br>
+
+<%= link_to 'Delete', {:action => 'destroy', :id => @post.id}, :class => "btn btn-danger", :method => :delete, :data => {:confirm => @confirm} %>
 
 <hr>
-<form class="" action="/cities/<%= @post.city_id %>">
-  <input type="submit" name="" value="Go Back">
+<form action="/cities/<%= @post.city_id %>">
+  <input type="submit" class="btn btn-default" value="Go Back">
 </form>
-
-<!-- <td><%= link_to 'Edit', :action => 'edit', :id => @post.id %></td> -->
-<%= link_to 'Edit', :action => 'edit', :id => @post.id %>

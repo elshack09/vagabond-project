@@ -23,6 +23,7 @@ class PostsController < ApplicationController
   def new
     @city = City.find(params[:city_id])
     @post = Post.new
+    @confirm = "You're post was submitted for #{@city.name}!"
     render :new
 
   end
