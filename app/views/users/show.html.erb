@@ -1,0 +1,16 @@
+<h1><%= current_user.first_name%> <%= current_user.last_name %></h1>
+
+<div class="user-information">
+    <h5><%= current_user.email %></h5>
+    <h5><%= current_user.phone_number %></h5>
+</div>
+
+<h2>Posts</h2>
+<ul>
+    <% @posts.each do |post| %>
+        <li><%= post.title %></li>
+        <li><%= post.content %></li>
+        <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>/edit">EDIT</a>
+        <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>">DELETE</a>
+    <% end %>
+</ul>

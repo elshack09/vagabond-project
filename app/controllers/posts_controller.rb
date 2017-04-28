@@ -54,7 +54,7 @@ class PostsController < ApplicationController
   private
     def post_params
       params.require(:post).permit(:title, :content)
-      .merge(city_id: params[:city_id])
+      .merge(user_id: current_user.id, city_id: params[:city_id])
 
     end
 

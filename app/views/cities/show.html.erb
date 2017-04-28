@@ -16,15 +16,13 @@
           <% @posts.reverse_each do |post| %>
               <li>
                   <h4> <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>"><%= post.title %></a></h4> <p><%= post.created_at %></p>
-
-
               </li>
           <% end %>
 
       </ul>
       <br>
-      <form class="add" action="/cities/<%= @city.id %>/posts/new">
-        <input type="submit" class="btn-primary" value="Add New Post">
+      <form class="add">
+        <%= link_to "New Post", new_city_post_path(@city) %>
       </form>
     </div>
 
