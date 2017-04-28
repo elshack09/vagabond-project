@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
     get '/' => 'cities#index'
 
     # cities
@@ -7,4 +8,5 @@ Rails.application.routes.draw do
         resources :posts
     end
 
+    root to: "cities#index"
 end
