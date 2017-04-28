@@ -10,5 +10,6 @@
     <% @posts.each do |post| %>
         <li><%= post.title %></li>
         <li><%= post.content %></li>
+        <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>/edit">EDIT</a>
     <% end %>
 </ul>
