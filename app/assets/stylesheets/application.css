@@ -26,8 +26,9 @@ li {
 }
 /*NAVBAR*/
 
-nav {
+nav, nav h3, nav ul {
   padding: 20px;
+  margin: 0 auto;
   background-color: #eee;
 }
 
