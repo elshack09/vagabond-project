@@ -44,6 +44,29 @@ nav .brand {
   letter-spacing: .1em;
 }
 
+.main-nav ul a {
+  padding: 0px 20px;
+  font-weight: bold ;
+  letter-spacing: .2em;
+  color: #444;
+}
+
+.main-nav ul a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-nav {
+  margin: 0px 15px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.btn-nav:hover, button.btn-nav:hover{
+  background-color: #444;
+  color: white !important
+}
+
 /*SHOW CITY PAGE*/
 
 .add {

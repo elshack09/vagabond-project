@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   include ActiveModel::ForbiddenAttributesProtection
 
   belongs_to :city
-  validates :title, :content, presence: true
+  validates :content, presence: true
+  validates :title, presence: true
 
 end
