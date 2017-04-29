@@ -14,6 +14,15 @@
  *= require_self
  */
 
+ /*FONTS*/
+ @import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600');
+
+/*GENERAL */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+}
+
 body {
   height: 100%;
   margin: 0 auto;
@@ -24,9 +33,11 @@ body {
 li {
   list-style-type: none;
 }
+
+
 /*NAVBAR*/
 
-nav, nav h3, nav ul {
+nav, nav ul {
   padding: 20px;
   margin: 0 auto;
   background-color: #eee;
@@ -37,7 +48,6 @@ nav .brand {
   text-transform: uppercase;
   letter-spacing: .1em;
 }
-
 
 .main-nav {
   text-align: right;
