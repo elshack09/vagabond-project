@@ -100,10 +100,11 @@ nav .brand {
   padding: 0px;
 }
 
-#cf img, img.bottom {
+#cf img {
   position:absolute;
   object-fit: cover;
   width: 100%;
+  height: 500px;
   left:0;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
@@ -126,7 +127,7 @@ opacity:0;
 }
 }
 
-#cf3 img.top {
+#cf img.top {
 animation-name: cf3FadeInOut;
 animation-timing-function: ease-in-out;
 animation-iteration-count: infinite;
