@@ -1,14 +1,27 @@
-<div class="homepage">
-  <h1>Vagabond</h1>
-  <p>Your Favorite Travel App</p>
-  <h3>
-  <ul>
-    <% @cities.each do |city| %>
-    <a href="/cities/<%= city.id %>">
-    <li> <%= city.name %></li>
-    </a>
-    <% end %>
-  </ul>
-  </h3>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VagabondProject</title>
+    <%= csrf_meta_tags %>
 
-</div>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+    <body>
+        <div id="cf">
+            <img class="bottom" src="https://source.unsplash.com/x1Qw-pfM9HA"/>
+            <img class="top" src="https://source.unsplash.com/MO-30jajbrM" />
+        </div>
+
+        <h3>
+            <ul>
+                <% @cities.each do |city| %>
+                    <a href="/cities/<%= city.id %>">
+                        <li> <%= city.name %></li>
+                    </a>
+                <% end %>
+            </ul>
+        </h3>
+
+    </body>
+</html>
