@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Vagabond | Your Favorite Travel App</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title>Vagabond | Your Favorite Travel App</title>
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <nav class="row row-centered">
-    <div class="col col-md-6 brand col-centered">
-      <img src="http://i63.tinypic.com/2w4iss0.png" alt="Vagabond Logo" width="150px">
-      <!-- <h3>Vagabond</h3>
-      <small>Your Favorite Travel App</small> -->
-    </div>
-    <div class="col col-md-6 main-nav col-centered">
-      <ul>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-            <button class="btn btn-nav"><a href="/">Home</a></button>
-            <% if user_signed_in? %>
+    <nav class="row row-centered">
+        <div class="col col-md-6 brand col-centered">
+            <img src="http://i63.tinypic.com/2w4iss0.png" alt="Vagabond Logo" width="150px">
+            <!-- <h3>Vagabond</h3>
+            <small>Your Favorite Travel App</small> -->
+        </div>
 
-            <button class="btn btn-nav">
-                <%= link_to "Sign Out", destroy_user_session_path, method: "delete" %>
-            </button>
-            <button class="btn btn-nav">
-                <%= link_to "Profile", profile_path %>
-            </button>
-            <% else %>
+        <div class="col col-md-6 main-nav col-centered">
+            <ul>
+                    <button class="btn btn-nav"><a href="/">Home</a></button>
+                <% if user_signed_in? %>
 
-            <button class="btn btn-nav">
-                <%= link_to "Sign Up", new_user_registration_path %>
-            </button>
+                    <button class="btn btn-nav">
+                    <%= link_to "Sign Out", destroy_user_session_path, method: "delete" %>
+                    </button>
+                    <button class="btn btn-nav">
+                    <%= link_to "Profile", profile_path %>
+                    </button>
+                    <% else %>
 
-            <button class="btn btn-nav">
-                <%= link_to "Sign In", new_user_session_path %>
-            </button>
+                    <button class="btn btn-nav">
+                    <%= link_to "Sign Up", new_user_registration_path %>
+                    </button>
+
+                    <button class="btn btn-nav">
+                    <%= link_to "Sign In", new_user_session_path %>
+                    </button>
+
+                <% end %>
+            </ul>
+        </div>
+    </nav>
+
+
+    <body>
+        <% if notice %>
+            <p class="alert alert-success"><%= notice %></p>
             <% end %>
+            <% if alert %>
+            <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
 
-
-      </ul>
-    </div>
-  </nav>
-
-
-  <body>
-    <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-
-    <%= yield %>
-  </body>
+        <%= yield %>
+    </body>
 </html>
