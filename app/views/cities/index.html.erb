@@ -15,18 +15,55 @@
             <img class="cFive" src="https://source.unsplash.com/d7mKQgFYVHY"/>
         </div>
 
-        <div class="cities">
-            <h3>
-                <ul>
-                    <% @cities.each do |city| %>
-                        <a href="/cities/<%= city.id %>">
-                            <div>
-                                <%= city.name %>
-                            </div>
-                        </a>
-                    <% end %>
-                </ul>
-            </h3>
+        <div class="headline">
+            <h1>Welcome to your new favorite travel site!</h1>
+            <h5>add your experience to a city below</h5>
         </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="atlanta">
+                        <h3>
+                            <a href="/cities/<%= @cities[0].id %>" style="color: white">
+                                <%= @cities[0].name %>
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="london">
+                        <h3>
+                            <a href="/cities/<%= @cities[1].id %>" style="color: white">
+                                <%= @cities[1].name %>
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="sanfran">
+                        <h3>
+                            <a href="/cities/<%= @cities[2].id %>" style="color: white">
+                                <%= @cities[2].name %>
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="amsterdam">
+                        <h3>
+                            <a href="/cities/<%= @cities[3].id %>" style="color: white">
+                                <%= @cities[3].name %>
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
