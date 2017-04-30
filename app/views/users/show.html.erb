@@ -21,7 +21,8 @@
         <ul>
             <% @posts.each do |post| %>
                 <h5><%= post.title %></h5>
-                <li><%= post.content %></li>
+                <li>Post: <%= post.content %></li>
+                <li><small>Posted: <%= time_ago_in_words(post.created_at)%></small></li>
                 <a class="btn btn-default" href="/cities/<%= post.city_id %>/posts/<%= post.id %>/edit">EDIT</a>
                 <a class="btn btn-danger" href="/cities/<%= post.city_id %>/posts/<%= post.id %>">DELETE</a>
                 <hr>
