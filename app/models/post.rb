@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
-  include ActiveModel::ForbiddenAttributesProtection
+  # include ActiveModel::ForbiddenAttributesProtection
 
   belongs_to :city
   belongs_to :user

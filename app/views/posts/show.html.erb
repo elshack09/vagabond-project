@@ -1,6 +1,6 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.content %></p>
-<small><b>Posted: <%= @post.created_at %></b></small> <br>
+<small><b>Posted: <%= time_ago_in_words(@post.created_at)%> ago.</b></small> <br>  
 <br>
 
 <%= link_to 'Edit', :action => 'edit', :id => @post.id %> <br>

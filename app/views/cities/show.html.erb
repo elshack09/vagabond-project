@@ -1,31 +1,32 @@
 
 <div class="banner" style="background: linear-gradient(rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.7)),url(<%= @city.photo_url %>); background-position: center; background-size:cover;">
-  <h1>Welcome to <%= @city.name %></h1>
+    <h1>Welcome to <%= @city.name %></h1>
 </div>
 
 <div class="row">
-  <div class="col col-md-6 reviews-photo">
-    <img src="<%= @city.photo_url %>" width="500px" alt="">
 
-  </div>
-  <div class="col col-md-6 reviews-show">
-    <div class="border-box">
-      <h2>Reviews:</h2>
-
-      <ul>
-          <% @posts.reverse_each do |post| %>
-              <li>
-                  <h4> <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>"><%= post.title %></a></h4> <p><%= post.created_at %></p>
-              </li>
-          <% end %>
-
-      </ul>
-      <br>
-      <form class="add">
-        <%= link_to "New Post", new_city_post_path(@city) %>
-      </form>
+    <div class="col col-md-6 reviews-photo">
+        <img src="<%= @city.photo_url %>" width="500px" alt="">
     </div>
 
-  </div>
+    <div class="col col-md-6 reviews-show">
+        <div class="border-box">
+            <h2>Reviews:</h2>
+                <ul>
+                    <% @posts.reverse_each do |post| %>
+                        <li>
+                            <h4> <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>"><%= post.title %></a></h4>
+                            <p><%= time_ago_in_words(post.created_at)%> ago.</p> 
+                        </li>
+                    <% end %>
+                </ul>
+            <br>
+
+            <form class="add">
+                <%= link_to "New Post", new_city_post_path(@city) %>
+            </form>
+
+        </div>
+    </div>
 </div>
 <hr>
