@@ -239,6 +239,10 @@ nav .brand {
     opacity: 0.5;
 }
 
+.container .row {
+    margin-bottom: 50px;
+}
+
 .atlanta {
     background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("https://source.unsplash.com/-IIluzOp4yA");
     /*background-image: url("https://source.unsplash.com/-IIluzOp4yA");*/
@@ -292,11 +296,14 @@ nav .brand {
 
 .user-information.col.col-md-4 {
   border-right: 1px solid #000000;
-  height: 60vh;
 }
 
 h2.profile-intro {
   margin: 50px 0px;
+}
+
+.user-profile {
+    margin-bottom: 50px;
 }
 
 /*FOOTER*/
