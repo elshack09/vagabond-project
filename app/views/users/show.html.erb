@@ -6,10 +6,11 @@
   <div class="user-information col col-md-4">
       <h4>Profile Information</h4>
       <br>
+      <h6><b>Profile Image:</b> <br>
+      <img src="<%= current_user.photo_url %>" alt="" width="250px">
       <h6><b>First Name:</b> <%= current_user.first_name %></h6>
       <h6><b>Last Name:</b> <%= current_user.last_name %></h6>
       <h6><b>Email:</b> <%= current_user.email %></h6>
-      <h6><b>Phone Number:</b> <%= current_user.phone_number %></h6>
       <br>
       <a class="btn btn-default" href="/users/edit">EDIT ACCOUNT</a>
   </div>
