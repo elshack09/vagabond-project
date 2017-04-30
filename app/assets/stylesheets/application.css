@@ -222,6 +222,10 @@ nav .brand {
     font-weight: 300;
 }
 
+.atlanta:hover, .london:hover, .sanfran:hover, .amsterdam:hover  {
+    opacity: 0.5;
+}
+
 .atlanta {
     background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("https://source.unsplash.com/-IIluzOp4yA");
     /*background-image: url("https://source.unsplash.com/-IIluzOp4yA");*/
@@ -231,11 +235,6 @@ nav .brand {
     height: 300px;
     text-align: center;
     margin: 0 auto;
-}
-
-.atlanta:hover {
-    opacity: 0.5;
-    color: #000;
 }
 
 .london {
@@ -249,11 +248,6 @@ nav .brand {
     margin: 0 auto;
 }
 
-.london:hover {
-    opacity: 0.5;
-    color: #000;
-}
-
 .sanfran {
     background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("https://source.unsplash.com/_dwwHrYRWcM");
     /*background-image: url("https://source.unsplash.com/_dwwHrYRWcM");*/
@@ -265,11 +259,6 @@ nav .brand {
     margin: 0 auto;
 }
 
-.sanfran:hover {
-    opacity: 0.5;
-    color: #000;
-}
-
 .amsterdam {
     background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("https://source.unsplash.com/THIp--XgnIE");
     /*background-image: url("https://source.unsplash.com/THIp--XgnIE");*/
@@ -279,11 +268,6 @@ nav .brand {
     height: 300px;
     text-align: center;
     margin: 0 auto;
-}
-
-.amsterdam:hover {
-    opacity: 0.5;
-    color: #000;
 }
 
 /*#cf img {
