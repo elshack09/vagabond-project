@@ -33,6 +33,11 @@ li {
   list-style-type: none;
 }
 
+.btn {
+  border-radius: 50px;
+  margin: 5px;
+}
+
 
 /*NAVBAR*/
 
@@ -208,37 +213,18 @@ nav .brand {
     100% { opacity: 0 }
 }
 
-/*#cf img {
-  position:absolute;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  left:0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+/*USER PROFILE PAGE*/
+
+.user-content {
+  text-align: left;
+  padding-left: 60px;
 }
 
-@keyframes cfFadeInOut {
-    0% {
-    opacity:1;
-    }
-    45% {
-    opacity:1;
-    }
-    55% {
-    opacity:0;
-    }
-    100% {
-    opacity:0;
-    }
+.user-information.col.col-md-4 {
+  border-right: 1px solid #000000;
+  height: 60vh;
 }
 
-#cf img {
-animation-name: cfFadeInOut;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 10s;
-animation-direction: alternate;
-}*/
+h2.profile-intro {
+  margin: 50px 0px;
+}

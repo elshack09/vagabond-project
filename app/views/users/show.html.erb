@@ -1,16 +1,27 @@
-<h1><%= current_user.first_name%> <%= current_user.last_name %></h1>
+<h2 class="profile-intro">Welcome to your account <%= current_user.first_name%> !</h2>
+<br>
 
-<div class="user-information">
-    <h5><%= current_user.email %></h5>
-    <h5><%= current_user.phone_number %></h5>
+<div class="row user-profile">
+  <div class="user-information col col-md-4">
+      <h4>Profile Information</h4>
+      <br>
+      <h6><b>First Name:</b> <%= current_user.first_name %></h6>
+      <h6><b>Last Name:</b> <%= current_user.last_name %></h6>
+      <h6><b>Email:</b> <%= current_user.email %></h6>
+      <h6><b>Phone Number:</b> <%= current_user.phone_number %></h6>
+  </div>
+
+  <div class="col col-md-8 user-content">
+    <h4>Your posts:</h4>
+    <br>
+    <ul>
+        <% @posts.each do |post| %>
+            <h5><%= post.title %></h5>
+            <li><%= post.content %></li>
+            <a class="btn btn-default" href="/cities/<%= post.city_id %>/posts/<%= post.id %>/edit">EDIT</a>
+            <a class="btn btn-danger" href="/cities/<%= post.city_id %>/posts/<%= post.id %>">DELETE</a>
+        <% end %>
+    </ul>
+  </div>
+
 </div>
-
-<h2>Posts</h2>
-<ul>
-    <% @posts.each do |post| %>
-        <li><%= post.title %></li>
-        <li><%= post.content %></li>
-        <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>/edit">EDIT</a>
-        <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>">DELETE</a>
-    <% end %>
-</ul>
