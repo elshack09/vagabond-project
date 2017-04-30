@@ -101,9 +101,10 @@ nav .brand {
 }
 
 .banner h1 {
-  color: white;
+  color: black;
   margin: 0px;
   padding-top: 120px;
+  font-weight: 300;
 }
 
 .border-box {
