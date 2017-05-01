@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @user = @post.user
      @confirm = "Are you sure you want to delete this review: #{@post.title} ?"
   end
 
