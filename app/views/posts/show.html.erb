@@ -4,7 +4,7 @@
   <br>
   <p><%= @post.content %></p>
 
-  <small><b>Posted: <%= time_ago_in_words(@post.created_at)%> ago.</b></small> <br>
+  <small><b>Posted: <%= time_ago_in_words(@post.created_at)%> ago by <%= @user.first_name %> <%= @user.last_name %>.</b></small> <br>
   <br>
 
   <a class="twitter-share-button"
