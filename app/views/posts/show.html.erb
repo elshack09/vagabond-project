@@ -3,10 +3,13 @@
 
 <small><b>Posted: <%= time_ago_in_words(@post.created_at)%> ago.</b></small> <br>
 <br>
+<% if user_signed_in? %>
 
 <%= link_to 'Edit', :action => 'edit', :id => @post.id %> <br>
 
 <%= link_to 'Delete', {:action => 'destroy', :id => @post.id}, :class => "btn btn-danger", :method => :delete, :data => {:confirm => @confirm} %>
+<% else %>
+<% end %>
 
 <hr>
 
