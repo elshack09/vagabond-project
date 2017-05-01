@@ -4,6 +4,13 @@
 
   <small><b>Posted: <%= time_ago_in_words(@post.created_at)%> ago.</b></small> <br>
   <br>
+
+  <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Check%20out%20this%20post%20on%20Vagabond!"
+  data-size="large">Tweet</a>
+
+  <br>
+  <hr>
   <% if user_signed_in? %>
 
   <%= link_to 'Edit', :action => 'edit', :id => @post.id %> <br>
@@ -12,10 +19,26 @@
   <% else %>
   <% end %>
 
-  <hr>
-
   <form action="/cities/<%= @post.city_id %>">
       <input type="submit" class="btn btn-default" value="Go Back">
   </form>
 
 </div>
+
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
