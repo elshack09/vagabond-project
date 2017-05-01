@@ -1,18 +1,21 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
+<div class="container">
+  <h1><%= @post.title %></h1>
+  <p><%= @post.content %></p>
 
-<small><b>Posted: <%= time_ago_in_words(@post.created_at)%> ago.</b></small> <br>
-<br>
-<% if user_signed_in? %>
+  <small><b>Posted: <%= time_ago_in_words(@post.created_at)%> ago.</b></small> <br>
+  <br>
+  <% if user_signed_in? %>
 
-<%= link_to 'Edit', :action => 'edit', :id => @post.id %> <br>
+  <%= link_to 'Edit', :action => 'edit', :id => @post.id %> <br>
 
-<%= link_to 'Delete', {:action => 'destroy', :id => @post.id}, :class => "btn btn-danger", :method => :delete, :data => {:confirm => @confirm} %>
-<% else %>
-<% end %>
+  <%= link_to 'Delete', {:action => 'destroy', :id => @post.id}, :class => "btn btn-danger", :method => :delete, :data => {:confirm => @confirm} %>
+  <% else %>
+  <% end %>
 
-<hr>
+  <hr>
 
-<form action="/cities/<%= @post.city_id %>">
-    <input type="submit" class="btn btn-default" value="Go Back">
-</form>
+  <form action="/cities/<%= @post.city_id %>">
+      <input type="submit" class="btn btn-default" value="Go Back">
+  </form>
+
+</div>

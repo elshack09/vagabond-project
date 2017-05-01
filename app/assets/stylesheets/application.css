@@ -306,6 +306,17 @@ h2.profile-intro {
     margin-bottom: 50px;
 }
 
+/*NEW POST*/
+
+input#post_title, textarea#post_content {
+  width: 450px;
+}
+
+textarea#post_content {
+  height: 200px;
+  border: 1px solid #ddd;
+}
+
 /*FOOTER*/
 
 .footer {
