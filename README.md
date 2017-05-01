@@ -1,25 +1,38 @@
-# README
+## Vagabond Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Landing Screenshot](https://github.com/Matkins15/vagabond-project/blob/master/app/assets/images/logo.png?raw=true)
 
-Things you may want to cover:
+## Overview
+Vagabond is a travel app that makes it easy for travelers to track and review their favorite cities! Users can sign in and update cities with their recent travel opinions for other travelers to take note!
 
-* Ruby version
+## Link
+[Site to Vagabond](https://safe-escarpment-90137.herokuapp.com/) [Heroku]
 
-* System dependencies
+## Trello Board
+[Vagabond Trello Link](https://trello.com/b/cb8rIbaX/mini-project-vagabond)
 
-* Configuration
+## Technologies 
+* Languages - HTML, CSS, Rails, Ruby
+* Design - Google Fonts, Bootstrap
+* Project Planning + User Stories - Trello
+* Atom/Sublime Text Editor
+* Logo - SquareSpace
 
-* Database creation
 
-* Database initialization
+## Future Developments
 
-* How to run the test suite
+* Include Google API for posts to have location markers
+* Include Facebook and Twitter sharing
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Portfolio
++ [Aylin Portfolio](https://www.aylinmarie.co)
 
-* ...
-# vagabond-project
++ [Matthew Portfolio](http://www.matthewatkins.co/)
+
+## Final Prototype
+
+![Landing Page](https://github.com/Matkins15/vagabond-project/blob/master/app/assets/images/FireShot%20Capture%2024%20-%20Vagabond%20I%20Your%20Favorite%20Travel%20App%20-%20http___localhost_3000_.png?raw=true)
+
+
+
