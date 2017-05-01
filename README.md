@@ -1,6 +1,6 @@
 ## Vagabond Project
 
-![Landing Screenshot]()
+![Landing Screenshot](https://github.com/Matkins15/vagabond-project/blob/master/app/assets/images/logo.png?raw=true)
 
 ## Overview
 Vagabond is a travel app that makes it easy for travelers to track and review their favorite cities! Users can sign in and update cities with their recent travel opinions for other travelers to take note!
