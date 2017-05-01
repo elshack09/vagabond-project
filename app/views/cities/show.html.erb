@@ -16,14 +16,17 @@
                     <% @posts.reverse_each do |post| %>
                         <li>
                             <h4> <a href="/cities/<%= post.city_id %>/posts/<%= post.id %>"><%= post.title %></a></h4>
-                            <p><%= time_ago_in_words(post.created_at)%> ago.</p> 
+                            <p><%= time_ago_in_words(post.created_at)%> ago.</p>
                         </li>
                     <% end %>
                 </ul>
             <br>
 
             <form class="add">
+              <% if user_signed_in? %>
                 <%= link_to "New Post", new_city_post_path(@city) %>
+                <% else %>
+                <% end %>
             </form>
 
         </div>
