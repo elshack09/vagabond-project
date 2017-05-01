@@ -32,12 +32,7 @@ Vagabond is a travel app that makes it easy for travelers to track and review th
 
 ## Final Prototype
 
-![Landing Page](https://github.com/aylinmarie/project-3/blob/master/public/images/Screen%20Shot%202017-04-11%20at%2016.37.45.png?raw=true)
+![Landing Page](https://github.com/Matkins15/vagabond-project/blob/master/app/assets/images/FireShot%20Capture%2024%20-%20Vagabond%20I%20Your%20Favorite%20Travel%20App%20-%20http___localhost_3000_.png?raw=true)
 
-![Page 2](https://github.com/aylinmarie/project-3/blob/master/public/images/Screen%20Shot%202017-04-11%20at%2016.38.01.png?raw=true)
-
-![Page 3](https://github.com/aylinmarie/project-3/blob/master/public/images/Screen%20Shot%202017-04-11%20at%2016.38.08.png?raw=true)
-
-![Page 4](https://github.com/aylinmarie/project-3/blob/master/public/images/Screen%20Shot%202017-04-11%20at%2016.38.15.png?raw=true)
 
 
