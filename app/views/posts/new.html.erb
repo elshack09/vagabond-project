@@ -1,12 +1,12 @@
 <h1>Add New Post for <%= @city.name %> </h1>
 
 <% if @post.errors.any? %>
-  <h3>Oops there were some errors. Please try again:</h3>
-  <ul>
-    <% @list.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
+    <h3>Oops there were some errors. Please try again:</h3>
+        <ul>
+            <% @list.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
 <% end %>
 
 <%= form_for :post, :data => {:confirm => @confirm}, url: {action: 'create'} do |f| %>
